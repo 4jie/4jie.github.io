@@ -1,0 +1,467 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="欢迎来到4jie的个人博客~" href="https://4jie.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="欢迎来到4jie的个人博客~" href="https://4jie.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="欢迎来到4jie的个人博客~" href="https://4jie.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://4jie.github.io/2023/10/06/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/">
+
+
+
+  <title>
+响应式编程 |
+Yume Shoka = 欢迎来到4jie的个人博客~</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">响应式编程
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-10-06 22:09:10">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-06T22:09:10+08:00">2023-10-06</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://4jie.github.io/2023/10/06/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="4jie">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="欢迎来到4jie的个人博客~">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="响应式编程详解"><a class="markdownIt-Anchor" href="#响应式编程详解">#</a> 响应式编程详解</h1>
+<p>响应式编程是一种基于异步数据流驱动、响应式、使用声明式范式的编程模型，需要遵循一定的响应式编程开发规范，并且有具体的类库实现。响应式编程基于数据流而不是控制流进行业务逻辑的推进。</p>
+<h1 id="响应式编程与设计模式"><a class="markdownIt-Anchor" href="#响应式编程与设计模式">#</a> 响应式编程与设计模式</h1>
+<p>在面向对象编程语言中，响应式编程通常以观察者模式呈现。将响应式流模式和迭代器模式比较，其主要区别是，迭代器基于 “拉” 模式，而响应式流基于 “推” 模式。</p>
+<p>在命令编程范式中，开发者掌握控制流，使用迭代器遍历 “数据”，使用 hasNext（）函数判断数据是否遍历完成，使用 next（）函数访问下一个元素。在响应式编程模式中，使用观察者模式，数据由消息发布者（Publisher）发布并通知订阅者（Subscriber），而这种观察者模式本身在基于事件监听机制的响应式系统架构中被广泛使用。Java 早期的 Swing 界面设计也是基于视图事件触发业务响应的系统工作模式。所以，从设计模式的角度讲，响应式编程并不是新鲜事物，只是响应式编程将监听的对象扩展到了更大范围：静态或者动态的 Stream 数据流，如下图所示。</p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/4a2df9ad1abc487a8dbe79e61e9a53d5~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=eOVK3jfs83D%2F%2FewnaTVKJjeUS0s%3D" alt="img"></p>
+<p>响应式编程还借鉴了 Reactor 设计模式，我们通常会在高性能 NIO 网络通信框架中见到 Reactor 设计模式的身影，用来实现 I/O 多路复用。其基本思想是将所有要处理的 I/O 事件注册到一个中心 I/O 多路复用器上，同时主线程阻塞在多路复用器上，通过轮询或者边缘触发的方式来处理网络 I/O 事件。当有新的 I/O 事件到来或准备就绪时，多路复用器返回并将事件分发到对应的处理器中。Reactor 设计模式和响应式编程类似，它们都不主动调用某个请求的 API，而是通过注册对应接口，实现事件触发执行，如下图所示。</p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/3c3d6187b5474c8b8d8e19dd4a76b60a~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=I6Koc8ZCS8YseEVlzXkFWiuXADY%3D" alt="img"></p>
+<h1 id="响应式编程与响应式架构"><a class="markdownIt-Anchor" href="#响应式编程与响应式架构">#</a> 响应式编程与响应式架构</h1>
+<p>响应式编程很容易和响应式架构混为一谈。前面我们介绍了响应式宣言中的构建软件架构原则，把符合这些原则的系统称为响应式系统。如果说响应式系统与响应式编程之间具有什么关系，那就是响应式系统的架构风格是响应式的，而响应式编程是实现这个架构风格的最佳实践。从宏观角度看，响应式系统由各种不同组件相互操作、调用组成，共同响应用户请求。响应式系统涉及通信协议、I/O 模型、网络传输、数据存储等多方面因素，保障系统在响应力、扩展性、容错、灵活性各方面表现出 “实时”“低延迟”“轻量”“健壮” 的系统特性。而响应式编程可能是这个大的系统架构下的一部分。另外，响应式系统一般是消息驱动的，而响应式编程是事件驱动的。</p>
+<h1 id="消息驱动与事件驱动"><a class="markdownIt-Anchor" href="#消息驱动与事件驱动">#</a> 消息驱动与事件驱动</h1>
+<p>响应式宣言指出了两者的区别：“消息驱动” 中消息数据被送往明确的目的地址，有固定导向；“事件驱动” 是事件向达到某个给定状态的组件发出的信号，没有固定导向，只有被观察的数据。</p>
+<p>● 在一个消息驱动系统中，可寻址的接收者等待消息的到来然后响应消息，否则保持休眠状态，消息驱动系统专注于可寻址的接收者。响应式系统更加关注分布式系统的通信和协作以达到解耦、异步的特性，满足系统的弹性和容错性，所以响应式系统更倾向于使用消息驱动模式。</p>
+<p>● 在一个事件驱动系统中，通知的监听者被绑定到消息源上。这样当消息被发出时，它就会被调用，所以，响应式编程更倾向于事件驱动。</p>
+<h1 id="响应式编程与函数式编程"><a class="markdownIt-Anchor" href="#响应式编程与函数式编程">#</a> 响应式编程与函数式编程</h1>
+<p>响 应 式 编 程 同 时 容 易 和 函 数 式 编 程 混 淆 。 函 数 式 编 程（Functional Reactive Programming，FRP）在二十年前就被 ConalElliott 精确地定义了。在函数式编程中，函数是第一类（firstclass）公民，函数式编程由 “行为” 和 “事件” 组成。事件是基于时间的离散序列，而行为是不可变的，是随着时间连续变化的数据。函数式编程与响应式编程相比，它更偏重于底层编码的实现细节。</p>
+<p>从 Java 8 开始，Lambda 表达式的引入为 Java 添加了函数式编程的特性，函数式编程提供了闭包的强大功能。Java 中的 Lambda 表达式通常使用（argument）-&gt;（body）语法书写，如下所示：</p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/8fee494018374472998edc60dd99389a~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=u%2FHT0C2JTd26y138vTw3pwJZMNs%3D" alt="img"></p>
+<p>下面是一些典型的 Lambda 表达式及其函数式接口：</p>
+<p>● Consumer<Integer> c=(int x)-&gt;{System.out.println(x)};</p>
+<p>● BiConsumer&lt;Integer, String&gt;b=(Integer x, String y)-</p>
+<p>&gt;System.out.println(x+&quot;:&quot;+y);</p>
+<p>● Predicate<String>p=(String s)-&gt;{s==null};</p>
+<p>在 Java 8 中新增加了 @FunctionalInterface 接口，用于指明该接口类型是根据 Java 语言规范定义的函数式接口。Java 8 还声明了一些 Lambda 表达式可以使用的函数式接口。下面是匿名类和使用函数式编程方式的对比示例。</p>
+<p>首先，使用 @FunctionalInterface 定义一个函数式编程接口。</p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f1d8f7c2b72741c08c2ed2db20f6b397~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=h%2Fo1m%2F%2FDgVmvf2AJf1cMaS6BMAk%3D" alt="img"></p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/21b3af06427642169771e0e37de20692~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=35mj9rKInLTBsMbqAEh15rYKPSU%3D" alt="img"></p>
+<p>然后，分别使用内部类和 Lambda 表达式两种方式执行业务逻辑。</p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/99a1139cdb4748069a0da678cfb94d95~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=efCyzJPbpTin0bcJrGRGCys7vdI%3D" alt="img"></p>
+<p>可以看到，在函数式编程中，Lambda 表达式允许将一个箭头函数作为参数进行传递，这样的语法表达更加简洁，而本质上由编译器推断并帮助实现转换包装为常规代码。因此，可以用更少的代码来实现相同的功能。而响应式编程的重点是基于 “事件流” 的异步编程范式，响应式编程通过函数编程方式简化面向对象语言语法的臃肿。响应式编程解决问题的流程是：将一个大的问题拆分为许多独立的小的步骤，而这些小的步骤都可以异步非阻塞地执行；当这些小的子任务执行完，它们会组成一个完整的工作流，并且这个工作流的输入输出都是非绑定的。实现响应式编程的关键就是 “非阻塞”，执行线程不会因为竞争一个共享资源而陷入阻塞等待，空耗资源，并且最大化地利用物理资源。</p>
+<p><strong>响应式编程与命令式编程模式</strong></p>
+<p>响应式编程是一种声明式的编程模型，与之相对应的就是命令模式（线程控制流）的编程模型。大家对命令式编程模式比较熟悉，下面是一段常见的基于命令式编程模式的代码：</p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/6f7319af9fb54ce6bcbd3c70634e4c6c~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=ivTpnYrqy1B918wSZYcZBPFIHn0%3D" alt="img"></p>
+<p>上述代码是通过变量的赋值并通过加法计算响应数据之间的对应算数关系结果。但是，这个代码有一个潜在的问题，当我们给这两个变量重新赋值时，第二次的 Sum 值却没有变化，与我们的期望不符，原因是缺少了执行相加的命令指令。</p>
+<p>响应式编程的目的是通过 “不可变操作符” 固定这种数据，构建数据之间的关系，并正确输出结果，不会因为操作命令的遗忘和缺失导致结果的偏差，造成对应关系和结果错误，下面我们看一下如何使用响应式编程方式来固化这种模式。</p>
+<p>下面使用 Java 9 的 Flow API 实现两个数的相加功能，按照相同思路，当传入的变量不同时，输出的 Sum 值也会随着变化，我们把这种对应关系构建为一个声明公式，代码实现如下：</p>
+<p><img data-src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/a1596e37f80c4873a353a7da08cbc06b~tplv-tt-origin-asy2:5aS05p2hQOeoi-W6j-WRmOmrmOe6p-eggeWGnElJ.image?_iz=58558&amp;from=article.pc_detail&amp;x-expires=1697205962&amp;x-signature=oPKa1168Jt%2BiPGON2wLoP3CI6JM%3D" alt="img"></p>
+<p>从结果看，响应式编程模式的两次 Sum 值和输入的数值一致，能够达到预期效果。从这个例子中，我们已经初步接触到了响应式编程中数据源也就是事件发布者（Publisher），还有就是事件的监听回调函数集合 —— 消费者（Subscriber）。消费者会根据 next、error、complet 触发函数对应关系的执行，以及数据的操作符操作，由于消费者的不可变性，可以根据原生的数据结构生成新的数据结构。相比命令式编程，响应式编程使用操作符表述了一个通用业务执行逻辑，一般可以组合达到预期效果，一般的操作符还包含 map、filter、reduce 等函数，这里就不再赘述了。</p>
+<h1 id="编程范式"><a class="markdownIt-Anchor" href="#编程范式">#</a> 编程范式</h1>
+<p>“普通的工程师堆砌代码，优秀的工程师优化代码，卓越的工程师简化代码”。</p>
+<p>如何写出优雅整洁的代码，不仅是一门学问，也是软件工程的重要一环。在上一节中，我们简单介绍了响应式编程的编程范式，本节我们进一步从开发者的视角、系统的性能、满足用户需求等方面讨论不同编程范式的使用场景和特性优势。</p>
+<p>编程范式，又称为编程模型，泛指软件编程过程中使用的编程风格，一般不同的编程范式具有不同的语法特性和差异。目前软件开发技术中常用的典型编程范式有以下几种。</p>
+<p>● 命令式编程。</p>
+<p>● 面向对象编程。</p>
+<p>● 声明式编程。</p>
+<p>● 函数式编程。</p>
+<p>因为每一个编程范式都有很长的发展历史，在编程语言支持上有不同的标准、组织和语法规范等，本节的目的是希望通过对这些编程范式的介绍，可以帮助我们更好地理解响应式编程范式。</p>
+<p><strong>命令式编程</strong></p>
+<p>命令式编程是非常传统的软件编程方式，命令式编程由不同的逻辑执行步骤组成，通过一步步指令的执行达到业务逻辑的推进，这种方式也称为过程式编程。命令式编程的执行过程非常符合计算机的执行步骤。C 语言是命令式编程的典型代表，它更关注的是机器域底层的内存、指令计算、输入输出。在 C 语言中，我们经常看到大段的过程式指令、各种 if/else/for 等控制语句、表达式、数据变量的操作、赋值等指令，这种纯指令开发方式要求开发者对计算机的底层工作原理有非常深刻的理解，而且一个指令出现偏差往往会产生不可预知的错误。同时，命令式编程模式的运维也是难度非常高的。</p>
+<p><strong>面向对象编程</strong></p>
+<p>面向对象编程可以说是编程领域的一个分水岭，开启了高级程序语言在软件开发上的统治阶段。面向对象编程从问题域出发，将封装、继承、多态的语言特性映射到我们的现实世界。在面向对象编程里，业务问题被抽象成类、接口模板，数据和行为被统一封装在对象内部，作为程序的基本组成单元。面向对象编程范式在提升软件重用性、灵活性和扩展性上比过程式编程更进一步，C++、Java 作为面向对象编程语言的代表，屏蔽了机器底层的内存管理和机器域的管理细节。而面向对象编程虽然有较高的开发效率，但是降低了代码的运行效率，这也限制了面向对象编程在性能要求苛刻场景下的应用。</p>
+<p><strong>声明式编程</strong></p>
+<p>声明式编程受当前 “约定优于配置” 理念的影响，在软件编程开发领域中被大量应用。声明式编程范式的好处是可以通过声明的方式实现业务逻辑，不需要陷入底层具体的业务逻辑实现细节。声明式编程范式关注的焦点不是采用什么算法或者逻辑来解决问题，而是描述、声明解决的问题是什么。当你的代码匹配预先设定好规则，业务逻辑就会被自动触发执行。</p>
+<p>很多标记性语言，如 HTML、XML、XSLT，就遵循声明式编程范式，而 Spring Boot 基于注解方式的编程模型也是声明式编程的一个代表。</p>
+<p>Spring 框架依赖 AOP 和 IoC 编程思想降低了开发者对底层逻辑业务细节的了解程度。例如在 Spring Boot 中，通过 @Transactional 注解可以声明一个方法具备事务性的操作，当异常发生时，事务会自动回滚，保证业务逻辑的正常和数据一致性。发生在 @Transactional 注解背后的实现细节，开发者可以不去关心。</p>
+<p><strong>函数式编程</strong></p>
+<p>在函数式编程范式中，函数无疑是一等公民，函数式编程最具魅力或者最重要的特性就是不可变性。它的不可变性表现在函数式编程表达式的执行结果，只取决于传入函数的参数序列，不受数据状态变化的影响。</p>
+<p>函数式编程中的 Lambda 在 Java 8 中被引入，可以看成是两个类型之间的关系：一个输入类型和一个输出类型。Lambda 演算就是给 Lambda 表达式一个输入类型的值，它就可以得到一个输出类型的值。</p>
+<p>这个计算过程也是函数式代码对映射的描述，因为函数式代码的抽象程度非常高，所以也意味着函数式代码有更好的复用性。</p>
+<p>函数式编程和命令式编程相比，更加关注消息或者数据的传递，而不像命令式编程，关注的是指令控制流。共享数据的状态在多线程环境下会存在资源竞争的情况，往往我们需要把额外的精力投入到冲突地解决、数据状态的维护中。而函数的不可变性保证了数据在传递处理过程中不会被篡改，也不需要依赖外部的锁资源或者状态来维护并发。所以函数式编程在多核处理器中具有天然的并发性，可以最大化地利用物理资源实现并行处理功能。</p>
+<p>目前，在 JVM 体系中，已经出现了越来越多函数式编程范式的语言，例如 Scala、Groovy、Clojure 等。在当前计算机多核、数据优先、高性能的诉求下，函数式编程具有更广阔的发展前景和未来。然而有利总会有弊，函数式编程的语法相比面向对象编程更晦涩，在大规模工程化的协调配合中，还是需要我们去权衡利弊。因为无论哪种语言范式，本质上都是工具，最终目的都是为业务服务。</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-10-06 22:11:04" itemprop="dateModified" datetime="2023-10-06T22:11:04+08:00">2023-10-06</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="4jie WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="4jie Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="4jie PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>4jie <i class="ic i-at"><em>@</em></i>欢迎来到4jie的个人博客~
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://4jie.github.io/2023/10/06/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/" title="响应式编程">https://4jie.github.io/2023/10/06/响应式编程/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/10/05/%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E9%80%9A%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicljitigmj20zk0m87fp.jpg" title="Untitled">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Untitled</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text"> 响应式编程详解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text"> 响应式编程与设计模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B%E4%B8%8E%E5%93%8D%E5%BA%94%E5%BC%8F%E6%9E%B6%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text"> 响应式编程与响应式架构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E9%A9%B1%E5%8A%A8%E4%B8%8E%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8"><span class="toc-number">4.</span> <span class="toc-text"> 消息驱动与事件驱动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B%E4%B8%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text"> 响应式编程与函数式编程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text"> 编程范式</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="4jie"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">4jie</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">4</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">1</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/10/05/My-new-Post/" title="My new Post">My new Post</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/09/06/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/10/06/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/" title="响应式编程">响应式编程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/10/05/%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E9%80%9A%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Untitled">Untitled</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">4jie @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/10/06/响应式编程/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

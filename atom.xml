@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>欢迎来到4jie的个人博客~</title>
+  
+  
+  <link href="https://4jie.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://4jie.github.io/"/>
+  <updated>2023-10-05T16:06:52.851Z</updated>
+  <id>https://4jie.github.io/</id>
+  
+  <author>
+    <name>4jie</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://4jie.github.io/2023/10/05/%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E9%80%9A%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://4jie.github.io/2023/10/05/%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E9%80%9A%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2023-10-05T14:39:52.237Z</published>
+    <updated>2023-10-05T16:06:52.851Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="屏幕适配通用解决方案"><a class="markdownIt-Anchor" href="#屏幕适配通用解决方案">#</a> 屏幕适配通用解决方案</h1><h2 id="目前存在两种通用的屏幕适配解决方案"><a class="markdownIt-Anchor" href="#目前存在两种通用的屏幕适配解决方案">#</a> 目前存在两种通用的屏幕适配解决方案</h2><ul><li>自定义控件，自定义 <code>ViewGroup</code>  控件，也就是写 <code>LinearLayout</code> 、 <code>RelativeLayout</code>  的子类，然后在其中的 <code>onMeasure()</code>  方法重写测量操作</li><li>定义 <code>dimens</code> ，给每种屏幕分辨率情况都配置一套 <code>dimens.xml</code>  配置</li></ul><h2 id="定义dimensxml"><a class="markdownIt-Anchor" href="#定义dimensxml">#</a> 定义 <code>dimens.xml</code></h2><h3 id="screenmatch插件"><a class="markdownIt-Anchor" href="#screenmatch插件">#</a>  <code>ScreenMatch</code>  插件</h3><p>Screenmatch 屏幕适配是 Google 推出的适配方法，只需使用官方的 Screenmatch 插件。<br>原理：Screenmatch 是拿 dp 值来进行等比例缩放来适配的。根据你的配置生成需要适配的屏幕尺寸的 dimens.xml 文件，运行时，系统会找到对应尺寸的 dimens.xml 文件。<br>优点：</p><p>1. 对文字缩放更友好</p><p>2. 可以一键生成需要适配的尺寸</p><h2 id="生成-dimensxml-文件"><a class="markdownIt-Anchor" href="#生成-dimensxml-文件">#</a> 生成 dimens.xml 文件</h2><p>安装完成后，右键点击 Module 项目，在弹出的菜单中，会有<br><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052237164.png" alt="在这里插入图片描述"></p><p>在弹出的 &quot;Select Module&quot; 对话框中 选择 app 选项；<br><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052237184.png" alt="在这里插入图片描述"></p><p>首次执行该操作，会提示 &quot;路径下文件找不到&quot; ;</p><p><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052238787.png" alt="在这里插入图片描述"><br>会生成如下目录文件；<br><img data-src="https://img-blog.csdnimg.cn/79cf05db2e6442dc910d976004bcabc5.png" alt="在这里插入图片描述"><br>在工程根目录下生成了 screenMatch_example_dimens.xml 配置文件，该配置文件是按照 sw360dp 为标准生成的；<br><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052238701.png" alt="在这里插入图片描述"><br>将该 screenMatch_example_dimens.xml 文件，重命名为 dimens.xml 文件，并且拷贝到 res/values 目录下；</p><p>如果 res/values/dimens.xml 文件已经存在，则将 screenMatch_example_dimens.xml 文件中的内容拷贝到该文件中；</p><p><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052237224.png" alt="在这里插入图片描述"></p><p>再次 右键点击 Module 应用目录，然后在弹出的菜单中 选择 ScreenMatch 选项，</p><p><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052239202.png" alt="在这里插入图片描述"></p><p>选中 指定 Module 后，点击 ok 按钮；</p><p><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052237471.png" alt="在这里插入图片描述"><br>此时会弹出 &quot;Over , adapt successful&quot; 弹窗，</p><p><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052239462.png" alt="在这里插入图片描述"><br>同时会生成下面矩形框中的一批目录文件；<br><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052237551.png" alt="在这里插入图片描述"></p><h2 id="配置-dimensxml-文件生成选项"><a class="markdownIt-Anchor" href="#配置-dimensxml-文件生成选项">#</a> 配置 dimens.xml 文件生成选项</h2><p>在文件 screenMatch.properties 中进行相关参数配置，每次配置完需要重新执行步骤 2，生成新的尺寸文件。<img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052346201.png" alt="在这里插入图片描述"></p><p>8、使用方法：</p><p><img data-src="https://cdn.jsdelivr.net/gh/4jie/PicGo@master/img/202310052346946.png" alt="在这里插入图片描述"></p><p>下面是获取屏幕尺寸的方法：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">getScreenSize</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="comment">//获取屏幕分辨率</span></span><br><span class="line">    DisplayMetrics metric=<span class="keyword">new</span> <span class="title class_">DisplayMetrics</span>();</span><br><span class="line">    getWindowManager().getDefaultDisplay().getMetrics(metric);</span><br><span class="line"><span class="type">int</span> width=metric.widthPixels; <span class="comment">// 宽度（PX）</span></span><br><span class="line"><span class="type">int</span> height=metric.heightPixels; <span class="comment">// 高度（PX）</span></span><br><span class="line"></span><br><span class="line"><span class="type">float</span> density=metric.density; <span class="comment">// 密度（0.75 / 1.0 / 1.5）</span></span><br><span class="line"><span class="type">int</span> densityDpi=metric.densityDpi; <span class="comment">// 密度DPI（120 / 160 / 240）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//屏幕宽度算法:屏幕宽度（像素）/屏幕密度</span></span><br><span class="line"><span class="type">int</span> <span class="variable">screenWidth</span> <span class="operator">=</span> (<span class="type">int</span>) (width/density);<span class="comment">//屏幕宽度(dp)</span></span><br><span class="line"><span class="type">int</span> <span class="variable">screenHeight</span> <span class="operator">=</span> (<span class="type">int</span>)(height/density);<span class="comment">//屏幕高度(dp)</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;宽度:&quot;</span> + width + <span class="string">&quot; 高度:&quot;</span> + height + <span class="string">&quot; 密度:&quot;</span> + density + <span class="string">&quot; 密度DPI:&quot;</span> + densityDpi</span><br><span class="line">        + <span class="string">&quot;\r\n屏幕dp宽度：&quot;</span> + screenWidth + <span class="string">&quot; 屏幕dp高度：&quot;</span> + screenHeight;</span><br><span class="line">Toast.makeText(MainActivity.<span class="built_in">this</span>, a, Toast.LENGTH_LONG).show();</span><br></pre></td></tr></table></figure><p>}</p><p>base_dp=360 指的是系统默认的标准值为 360dp ;</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Base dp value <span class="keyword">for</span> screen match. Cut the screen into [base_dp] parts.</span><br><span class="line"># Data type is <span class="type">double</span>. System <span class="keyword">default</span> value is <span class="number">360.</span></span><br><span class="line"># I advise you not to modify the value, be careful !!!!!!!!! _^_  *_*</span><br><span class="line">base_dp=<span class="number">360</span></span><br></pre></td></tr></table></figure><p>match_dp= 用于配置要生成哪些 swxxdp 的 dimens.xml 配置文件；</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Also need to match the phone screen of [match_dp].</span><br><span class="line"># If you have another dp values.</span><br><span class="line"># System <span class="keyword">default</span> values is <span class="number">240</span>,<span class="number">320</span>,<span class="number">384</span>,<span class="number">392</span>,<span class="number">400</span>,<span class="number">410</span>,<span class="number">411</span>,<span class="number">480</span>,<span class="number">533</span>,<span class="number">592</span>,<span class="number">600</span>,<span class="number">640</span>,<span class="number">662</span>,<span class="number">720</span>,<span class="number">768</span>,<span class="number">800</span>,<span class="number">811</span>,<span class="number">820</span>,<span class="number">960</span>,<span class="number">961</span>,<span class="number">1024</span>,<span class="number">1280</span>,<span class="number">1365</span></span><br><span class="line">match_dp=</span><br></pre></td></tr></table></figure><p>ignore_dp= 用于配置忽视屏幕哪些配置；</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># If you not wanna to match dp values above. Write some above values here, append value with <span class="string">&quot;,&quot;</span> .</span><br><span class="line"># For example: <span class="number">811</span>,<span class="number">961</span>,<span class="number">1365</span></span><br><span class="line">ignore_dp=</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;屏幕适配通用解决方案&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#屏幕适配通用解决方案&quot;&gt;#&lt;/a&gt; 屏幕适配通用解决方案&lt;/h1&gt;
+&lt;h2 id=&quot;目前存在两种通用的屏幕适配解决方案&quot;&gt;&lt;a class=&quot;markdownIt-An</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>My new Post</title>
+    <link href="https://4jie.github.io/2023/10/05/My-new-Post/"/>
+    <id>https://4jie.github.io/2023/10/05/My-new-Post/</id>
+    <published>2023-10-05T02:23:56.000Z</published>
+    <updated>2023-10-05T04:23:19.640Z</updated>
+    
+    <content type="html"><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zODU1MjUwNTM=">hexo 博客换主题 - 知乎 (zhihu.com)</span></p><p>切换主题的方式 修改_config.yml，然后修改执行 <code>hexo clean</code> ， <code>hexo g</code> ， <code>hexo d</code></p><p>切换主题之后需要使用 npm install hexo-renderer-pug hexo-renderer-stylus --save 刷新，执行 <code>hexo clean</code> ， <code>hexo g</code> ， <code>hexo d</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zODU1MjUwNTM=&quot;&gt;hexo 博客换主题 - 知乎 (zhihu.com)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;切换主题的方式 修改</summary>
+      
+    
+    
+    
+    
+    <category term="这是4jie在hexo上的测试博客" scheme="https://4jie.github.io/tags/%E8%BF%99%E6%98%AF4jie%E5%9C%A8hexo%E4%B8%8A%E7%9A%84%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://4jie.github.io/2023/09/06/hello-world/"/>
+    <id>https://4jie.github.io/2023/09/06/hello-world/</id>
+    <published>2023-09-06T09:17:12.818Z</published>
+    <updated>2023-09-06T09:17:12.818Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo</span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation</span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting</span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub</span>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start">#</a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post">#</a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing</span></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server">#</a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server</span></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files">#</a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating</span></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment</span></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9oZXhvLmlvLw==&quot;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&quot;exturl&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
